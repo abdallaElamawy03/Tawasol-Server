@@ -2,22 +2,32 @@
   "name": "server",
   "version": "1.0.0",
   "description": "Tawasol Application ",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start":"node server.js",
-    "server":"nodemon server.js"
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix ../client",
+    "dev": "concurrently \"npm:server\" \"npm:client\""
   },
   "author": "Abdalla Elamawy",
   "license": "MIT",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
     "config": "^3.3.12",
+    "cookie": "^1.0.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "express-session": "^1.18.1",
     "express-validator": "^7.2.0",
     "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.8.0",
     "mongoose": "^8.5.3",
     "multer": "^1.4.5-lts.1",
-    "normalize-url": "^8.0.1"
+    "normalize-url": "^4.5.1",
+    "prop-types": "^15.8.1"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
